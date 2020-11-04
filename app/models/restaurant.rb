@@ -3,6 +3,6 @@ class Restaurant < ApplicationRecord
 
   validates :phone_number, numericality: true
   validates :name, :address, :phone_number, :category, presence: true
-  # validates :category, inclusion: { in: ["chinese", "italian", "japanese", "french", "belgian"] }
-# [chinese italian japanese french belgian]
+  validates :category, inclusion: { in: ["chinese", "italian", "japanese", "french", "belgian"] }
+
 end
