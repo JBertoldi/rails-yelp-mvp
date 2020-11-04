@@ -8,6 +8,9 @@ class RestaurantsController < ApplicationController
   def show
   end
 
+  # def top
+  # end
+
   def new
     @restaurant = Restaurant.new
   end

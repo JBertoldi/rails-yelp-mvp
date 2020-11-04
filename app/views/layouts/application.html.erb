@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsYelpMvp</title>
+    <title>Munchies</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,6 +12,16 @@
   </head>
 
   <body>
+    <div class="dropdown mt-1 ml-1 mb-4">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Munchies
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <%= link_to 'All Restaurants', restaurants_path, class: "dropdown-item" %>
+        <%# <%= link_to 'Top Rated Restaurants', top_restaurants_path, class: "dropdown-item" %>
+        <%= link_to 'Add New Restaurant', new_restaurant_path, class: "dropdown-item" %>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
